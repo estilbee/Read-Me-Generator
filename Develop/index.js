@@ -17,6 +17,26 @@ const questions = [
             name: "description"
         },
         {
+            type:"input",
+            message: "What is the project's installation instructions?",
+            name: "installation"
+        },
+        {
+            type:"input",
+            message: "What is the project's usage information?",
+            name: "usage"
+        },
+        {
+            type:"input",
+            message: "What is the project's contribution guidlines?",
+            name: "contributing"
+        },
+        {
+            type:"input",
+            message: "What is the project's test instructions",
+            name: "tests"
+        },
+        {
             type:"list",
             choices: ["MIT","Apache","Mozilla","None"],
             name: "license",
@@ -42,7 +62,7 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(data => {
-        fs.writeFileSync("testreadme2.md", generateMarkdown(data))
+        fs.writeFileSync("testreadme3.md", generateMarkdown(data))
     })
 }
 
