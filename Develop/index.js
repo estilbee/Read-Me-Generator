@@ -16,6 +16,24 @@ const questions = [
             message: "What is the project description?",
             name: "description"
         },
+        {
+            type:"list",
+            choices: ["MIT","Apache","Mozilla","None"],
+            name: "license",
+            message: "What is your project licensed under?"
+        },
+        {
+            type:"input",
+            message: "What is your GitHub username?",
+            name: "GitHub"
+        },
+        {
+            type: "input",
+            message: "What is your email?",
+            name: "email"
+        }
+
+
 ];
 
 // TODO: Create a function to write README file
@@ -24,7 +42,7 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(data => {
-        fs.writeFileSync("testreadme.md", generateMarkdown(data))
+        fs.writeFileSync("testreadme2.md", generateMarkdown(data))
     })
 }
 
